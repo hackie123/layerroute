@@ -1,0 +1,7 @@
+{
+  "seed": 256,
+  "n_eval": 30,
+  "routed_ms_per_tok": 30.988,
+  "baseline_ms_per_tok": 32.476,
+  "speedup": 1.048
+}

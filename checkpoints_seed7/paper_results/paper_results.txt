@@ -1,0 +1,32 @@
+============================================================
+  CONFGATE v6 — PAPER RESULTS
+  LoRA + Hard-Gated Skip Connections on Qwen2.5-0.5B
+============================================================
+
+  Checkpoint   : checkpoints_seed7/best_adapters.pt
+  Eval samples : 100
+  LoRA rank    : 8
+
+── Gate Learning ────────────────────────────────────────
+  Gate range         : [0.2724, 0.731]
+  Gate variance      : 0.050938
+  Skip candidates    : 9/24
+
+── Adaptive Routing ─────────────────────────────────────
+  tool_call avg layers : 23.24/24  (skip 3.18%)
+  planning  avg layers : 20.5/24  (skip 14.58%)
+  Skip differential    : -11.4% more skipping on tool calls
+
+── FLOPs ────────────────────────────────────────────────
+  Full model    : 377,688,686,592
+  tool_call     : 365,728,544,849  (-3.2%)
+  planning      : 322,609,086,464  (-14.6%)
+
+── Perplexity (quality) ─────────────────────────────────
+  tool_call: ppl_full=4.867  ppl_gated=3.676  delta=-1.192
+  planning : ppl_full=5.025  ppl_gated=3.816  delta=-1.21
+
+── LoRA Impact ──────────────────────────────────────────
+  tool_call loss delta : -1.3041
+  planning  loss delta : -0.9397
+============================================================
